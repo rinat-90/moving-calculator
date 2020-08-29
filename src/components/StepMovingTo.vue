@@ -1,24 +1,23 @@
 <template>
-  <v-card flat>
+  <v-col cols="12" md="10" offset-md="1">
+    <v-card flat>
 
-    <v-card-title class="text-center">
-      <span class="mx-auto">Where are you moving to?</span>
-    </v-card-title>
-    <v-card-subtitle class="heading text-center">
-      We can easily handle all your stuff, but it's helpful to know where we're taking it.
-    </v-card-subtitle>
-    <v-card-title class="text-center">
-      <span class="mx-auto">Choose current location type:</span>
-    </v-card-title>
+      <v-card-title class="text-center">
+        <span class="mx-auto">Where are you moving to?</span>
+      </v-card-title>
+      <v-card-subtitle class="heading text-center">
+        We can easily handle all your stuff, but it's helpful to know where we're taking it.
+      </v-card-subtitle>
+      <v-card-title class="text-center">
+        <span class="mx-auto">Choose current location type:</span>
+      </v-card-title>
 
-    <v-card-text>
-      <v-item-group mandatory>
-        <v-container>
-         <location-list @onTypeSelect="select" />
-          <v-row>
-            <v-col>
-              <div>
-
+      <v-card-text>
+        <v-item-group mandatory>
+          <v-container>
+            <location-list @onTypeSelect="select" />
+            <v-row>
+              <v-col>
                 <v-row>
                   <v-col>
                     <v-form ref="form">
@@ -55,22 +54,22 @@
                     </v-row>
                   </v-col>
                 </v-row>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-item-group>
-    </v-card-text>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-item-group>
+      </v-card-text>
 
 
-    <v-card-actions>
-      <v-btn @click="$store.commit('DEC_STEP')">back</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn color="primary" @click="validateMovingTo">
-        Next: Special Items
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+      <v-card-actions>
+        <v-btn @click="$store.commit('DEC_STEP')">back</v-btn>
+        <v-spacer></v-spacer>
+        <v-btn color="primary" @click="validateMovingTo">
+          Next: Special Items
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-col>
 </template>
 
 <script>

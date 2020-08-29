@@ -10,7 +10,7 @@
     >
       <v-item v-slot:default="{ active, toggle }">
         <v-card
-            style="color: orange"
+            style="color: #eebb4d"
             :color="active ? 'primary' : ''"
             class="d-flex align-center py-10"
             :class="active ? 'white--text' : ''"
@@ -21,10 +21,10 @@
             </div>
           </v-scroll-y-transition>
           <v-col cols="12">
-            <div class="text-center white--text">
-              <v-icon size="48" :color="active ? 'white': 'primary'">{{  l.icon }}</v-icon>
+            <div class="text-center white--text mb-2">
+              <v-icon size="35" :color="active ? 'white': 'primary'">{{  l.icon }}</v-icon>
             </div>
-            <div class="text-center text-uppercase headline">{{ l.title }}</div>
+            <div class="text-center text-uppercase heading">{{ l.title }}</div>
           </v-col>
         </v-card>
       </v-item>
